@@ -1,0 +1,3 @@
+tw=0.0: BLEU-4 score @ beam size of 1 is 0.1627
+tw=0.5: BLEU-4 score @ beam size of 1 is 0.1697
+t1=1.0: BLEU-4 score @ beam size of 1 is 0.1645
