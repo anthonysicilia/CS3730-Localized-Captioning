@@ -127,25 +127,25 @@ def generate_caption_grouping(dir_):
 
 if __name__ == '__main__':
 
-    # train_paths = [
-    #     '../../../shared_data/coco17/coco_train_localized_narratives-00000-of-00004.jsonl',
-    #     '../../../shared_data/coco17/coco_train_localized_narratives-00001-of-00004.jsonl',
-    #     '../../../shared_data/coco17/coco_train_localized_narratives-00002-of-00004.jsonl',
-    #     '../../../shared_data/coco17/coco_train_localized_narratives-00003-of-00004.jsonl'
-    # ]
+    train_paths = [
+        '../../../shared_data/coco17/coco_train_localized_narratives-00000-of-00004.jsonl',
+        '../../../shared_data/coco17/coco_train_localized_narratives-00001-of-00004.jsonl',
+        '../../../shared_data/coco17/coco_train_localized_narratives-00002-of-00004.jsonl',
+        '../../../shared_data/coco17/coco_train_localized_narratives-00003-of-00004.jsonl'
+    ]
 
-    # words = dict()
+    words = dict()
 
-    # for tp in train_paths:
-    #     print(tp)
-    #     read_and_write_to(tp, 'coco_localized/train', words=words, traces=True)
+    for tp in train_paths:
+        print(tp)
+        read_and_write_to(tp, 'coco_localized/train', words=words, traces=True)
     
-    # words = [w for w in words.keys() if words[w] > 10]
-    # words = {k: v for v, k in enumerate(words)}
-    # for w in KEYWORDS:
-    #     words[w] = len(words)
+    words = [w for w in words.keys() if words[w] > 10]
+    words = {k: v for v, k in enumerate(words)}
+    for w in KEYWORDS:
+        words[w] = len(words)
     
-    # pickle.dump(words, open('coco_localized/vocab.pickle', 'wb'))
+    pickle.dump(words, open('coco_localized/vocab.pickle', 'wb'))
 
     val_path = '../../../shared_data/coco17/coco_val_localized_narratives.jsonl'
 
